@@ -4,7 +4,7 @@ var app = express();
 var cors = require("cors");
 
 app.options("*", cors());
-app.get("/", function (req, res) {
+app.get("/", cors(), function (req, res) {
   try {
     if (req.query.url) {
       https
